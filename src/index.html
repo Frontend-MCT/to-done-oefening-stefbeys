@@ -10,41 +10,41 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="style/reset.css">
     <link rel="stylesheet" href="style/style.css">
+    <script src="script/lib/dataAccess.js"></script>
+    <script src="script/lib/todo.js"></script>
+    <script src="script/lib/todoUI.js"></script>
+    <script src="script/lib/todoModule.js"></script>
 
-    <script src="src/script/app.js"></script>
+    <script src="script/app.js"></script>
 </head>
-<body>
+<body class="c-body">
+<article class="c-container">
 <header>
 <h1 class="c-MainTitle">
-    Hello <span contenteditable="true">Morty</span>,
+    Hello <span class="" contenteditable="true">Morty</span>,
 </h1>
-<h2 class="c-SubTitle">There are <span class="c-SubTitle__count">2</span> todo's.</h2>
+<h2 class="c-SubTitle">There are <span class="c-SubTitle__count js-todos-count">2</span> todo's.</h2>
 </header>
 <main class="c-form">
+
     <section class="c-InputHolder">
-        <button class="c-InputHolder__submit">
+        <button class="c-InputHolder__submit js-new-add">
             +
         </button>
         <div class="c-InputHolder__input">
-            <input class="c-Input__text" placeholder="Enter text here..." type="text">
-            <select class="c-Input__category" name="Type" id="selectType">
+            <input class="c-Input__text js-new-title" placeholder="Enter text here..." type="text">
+            <select class="c-Input__category js-new-category" name="Type" id="selectType">
                 <option selected>School</option>
                 <option>dafuq?</option>
                 <option>andere dafuqq?</option>
             </select>
         </div>
     </section>
-    <article>
-        <section>
-            <label for="1"></label>
-            <input id="1" type="checkbox">
-            
-            <div>
-                <label>Koeien melken</label>
-                <p>Category</p>
-            </div>
-        </section>
+    <article class="js-todo-items">
+
     </article>
+
 </main>
+</article>
 </body>
 </html>

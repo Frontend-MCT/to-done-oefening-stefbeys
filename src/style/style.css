@@ -2,7 +2,7 @@
 SETTINGS
 */
 *:root{
-
+    --gutter: 25px;
 }
 
 /*
@@ -18,8 +18,11 @@ body,html{
     color: var(--color-dark);
     font-size: 17px;
     font-family: 'Muli', sans-serif;
+    width: 100vw;
+    height: 100vh;
     /*appearance */
     /*other styles */
+    background-color: beige;
 }
 
 /*
@@ -38,29 +41,87 @@ OBJECTS
     clip: rect(0,0,0,0);
     border: 0;
 }
+.o-checkbox{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    box-sizing: border-box;
 
+    font-weight: bold;
+}
 
 /*
 
 COMPONENTS
 
 */
-.c-InputHolder{
+.c-Checkbox__container{
+    color: white;
+    margin: 0 15px;
+    width:var(--gutter);
+    border-radius: calc(2*var(--gutter));
+    border: #221e21 solid 1px;
+    height:var(--gutter);
+}
+.c-Checkbox__Mark{
+    transform: scale(-0,0) rotateZ(-45deg);
+    transition: transform 200ms ease-in-out;
+    width:100%;
+    height:100%;
+    background-color: orangered;
+
+    border-radius: calc(2*var(--gutter));
     display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.c-body{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
+
+.c-InputHolder{
+    margin-top: calc(0.5*var(--gutter));
+    display: flex;
+    align-items: center;
+    padding-bottom:calc(0.5*var(--gutter));
+    border-bottom: 1px #32323275 solid;
+}
 .c-InputHolder__submit{
+
     all: unset;
     cursor: pointer;
     text-transform: uppercase;
     opacity: 0.5;
     transition: opacity 200ms ease-in-out;
     color: orangered;
+    padding-right: calc(0.5*var(--gutter));
+    padding-left: calc(0.5*var(--gutter));
+    font-weight: bold;
     font-size: 1.5rem;
+}
+.c-InputHolder__submit:hover{
+    opacity: 0.8;
 }
 .c-InputHolder__input{
     display: flex;
     flex-flow: column;
+}
+.c-Input__text{
+    background-color: beige;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    padding-bottom: 10px;
+
+}
+.c-Input__category{
+    background-color: beige;
+    line-height: 1.1rem;
+    font-size: .9rem;
 }
 .c-Input__text,.c-Input__category{
     border: none;
@@ -69,9 +130,26 @@ COMPONENTS
 .c-Input__text:focus,.c-Input__category:focus{
     outline: none;
 }
-.c-Input__category{
-    border: none;
+.c-Inputholder__Check:checked+.o-checkbox .c-Checkbox__Mark{
+
+    transform: scale(-1,1)  rotateZ(-45deg) ;
 }
+.c-Inputholder__Check:checked+.o-checkbox{
+    border: none;
+
+}
+.c-Input__Subject{
+    margin: 0;
+    font-size: .9rem;
+
+}
+.c-Input__Detail{
+    margin: 0;
+    opacity: .6;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
 
 
 /*
