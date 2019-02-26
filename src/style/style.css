@@ -1,0 +1,86 @@
+/*
+SETTINGS
+*/
+*:root{
+
+}
+
+/*
+
+ELEMENTS
+
+ */
+body,html{
+    /*positioning */
+    /*box model */
+    /*fonts */
+    line-height: 1.6;
+    color: var(--color-dark);
+    font-size: 17px;
+    font-family: 'Muli', sans-serif;
+    /*appearance */
+    /*other styles */
+}
+
+/*
+
+OBJECTS
+
+*/
+
+.o-hide{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+
+/*
+
+COMPONENTS
+
+*/
+.c-InputHolder{
+    display: flex;
+    align-items: center;
+}
+.c-InputHolder__submit{
+    all: unset;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: opacity 200ms ease-in-out;
+    color: orangered;
+    font-size: 1.5rem;
+}
+.c-InputHolder__input{
+    display: flex;
+    flex-flow: column;
+}
+.c-Input__text,.c-Input__category{
+    border: none;
+
+}
+.c-Input__text:focus,.c-Input__category:focus{
+    outline: none;
+}
+.c-Input__category{
+    border: none;
+}
+
+
+/*
+
+UTILITIES
+
+*/
+
+
+
+
+
